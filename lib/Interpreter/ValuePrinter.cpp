@@ -582,7 +582,7 @@ static const char* BuildAndEmitVPWrapperBody(cling::Interpreter &Interp,
                                              clang::QualType QT,
                                              const void* ValPtr)
 {
-  const clang::SourceLocation noSrcLoc;
+  const clang::SourceLocation noSrcLoc{};
   clang::Sema::SynthesizedFunctionScope SemaFScope(S, WrapperFD);
   clang::Parser::ParseScope parseScope(&Interp.getParser(),
                                         clang::Scope::FnScope
@@ -674,7 +674,7 @@ static std::string callPrintValue(const Value& V, const void* Val) {
 
   {
     clang::ASTContext &Ctx = V.getASTContext();
-    const clang::SourceLocation noSrcLoc;
+    const clang::SourceLocation noSrcLoc{};
     clang::Sema &S = Interp->getSema();
 
     const clang::Decl *StdStringDecl
