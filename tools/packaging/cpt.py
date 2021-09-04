@@ -1792,7 +1792,7 @@ parser.add_argument('--with-llvm-url', action='store', help='Specify an alternat
 parser.add_argument('--with-clang-url', action='store', help='Specify an alternate URL of Clang repo',
                     default='http://root.cern.ch/git/clang.git')
 parser.add_argument('--with-cling-url', action='store', help='Specify an alternate URL of Cling repo',
-                    default='https://github.com/root-project/cling.git')
+                    default='https://github.com/pd3v/cling.git')
 parser.add_argument('--cling-branch', help='Specify a particular Cling branch')
 
 parser.add_argument('--with-binary-llvm', help='Download LLVM binary and use it to build Cling in dev mode', action='store_true')
